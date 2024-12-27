@@ -57,7 +57,14 @@ class TravelApp:
         self.photo_frame.pack(fill="both", expand=True)
 
         # Load and resize the photos
-        self.image_paths = ["Tokyo1.png", "Rome.jpeg", "Paris.jpeg", "SanFran.png", "NYC.png", "London.jpeg"]  # List of image paths
+        self.image_paths = [
+            "MainMenuImages/Tokyo1.png",
+            "MainMenuImages/Rome.jpeg",
+            "MainMenuImages/Paris.jpeg",
+            "MainMenuImages/SanFran.png",
+            "MainMenuImages/NYC.png",
+            "MainMenuImages/London.jpeg"
+        ]
         self.photos = [ImageTk.PhotoImage(Image.open(img_path).resize((625, 425), Image.Resampling.LANCZOS)) for img_path in self.image_paths]
 
         # Create the photo label
